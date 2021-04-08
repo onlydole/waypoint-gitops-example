@@ -1,8 +1,19 @@
-project = "waypoint-gitops-example"
+project = "waypoint-gitops"
 
-app "waypoint-gitops-example" {
+runner {
+  enabled = true
+  poll {
+    enabled = true
+    interval = "30s"
+  }
+  data_source "git" {
+    url  = "https://github.com/onlydole/waypoint-gitops-example.git"
+  }
+}
+
+app "waypoint-gitops" {
   labels = {
-    "service" = "waypoint-gitops-example",
+    "service" = "waypoint-gitops",
     "env"     = "dev"
   }
 
