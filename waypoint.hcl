@@ -1,8 +1,8 @@
-project = "example-nodejs"
+project = "waypoint-gitops-example"
 
-app "example-nodejs" {
+app "waypoint-gitops-example" {
   labels = {
-    "service" = "example-nodejs",
+    "service" = "waypoint-gitops-example",
     "env"     = "dev"
   }
 
