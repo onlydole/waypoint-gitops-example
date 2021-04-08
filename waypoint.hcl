@@ -10,7 +10,7 @@ app "waypoint-gitops-example" {
     use "pack" {}
     registry {
       use "aws-ecr" {
-        region     = "us-east-1"
+        region     = "us-west-2"
         repository = "waypoint-example"
         tag        = "latest"
       }
@@ -19,7 +19,7 @@ app "waypoint-gitops-example" {
 
   deploy {
     use "aws-ecs" {
-      region = "us-east-1"
+      region = "us-west-2"
       memory = "512"
     }
   }
